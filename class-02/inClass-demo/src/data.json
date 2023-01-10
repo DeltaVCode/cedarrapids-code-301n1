@@ -1,0 +1,38 @@
+[
+  {
+   "name": "Brick Oven Pizza",
+   "imageURL": "https://raw.githubusercontent.com/DeltaV-Instructor/class-13-201-demo-pizza-local-storage/main/images/Brick-Oven-Pizza.jpg"
+  },
+  {
+    "name": "Calzone Pizza",
+    "imageURL": "https://raw.githubusercontent.com/DeltaV-Instructor/class-13-201-demo-pizza-local-storage/main/images/Calzone-Pizza.jpg"
+  },
+  {
+    "name": "Chicago Pizza",
+    "imageURL": "https://raw.githubusercontent.com/DeltaV-Instructor/class-13-201-demo-pizza-local-storage/main/images/Chicago-Pizza.jpg"
+  },
+  {
+    "name": "Detroit Pizza",
+    "imageURL": "https://raw.githubusercontent.com/DeltaV-Instructor/class-13-201-demo-pizza-local-storage/main/images/Detroit-Pizza.jpg"
+  },
+  {
+    "name": "Deluxe Pizza Thin Crust",
+    "imageURL": "https://raw.githubusercontent.com/DeltaV-Instructor/class-13-201-demo-pizza-local-storage/main/images/Deluxe-Pizza-Thin-Crust.jpg"
+  },
+  {
+    "name": "New York Thin Crust",
+    "imageURL": "https://raw.githubusercontent.com/DeltaV-Instructor/class-13-201-demo-pizza-local-storage/main/images/New-York-Pizza.jpg"
+  },
+  {
+    "name": "Shot Gun Dans Meat Lovers Pizza",
+    "imageURL": "https://raw.githubusercontent.com/DeltaV-Instructor/class-13-201-demo-pizza-local-storage/main/images/Shotgun-Dans-MeatLover.jpg"
+  },
+  { 
+   "name": "Chicago Pizza and Oven Grinder",
+   "imageURL": "https://raw.githubusercontent.com/DeltaV-Instructor/class-13-201-demo-pizza-local-storage/main/images/Oven-Ginder-Pizza.jpg"
+  }, 
+  {
+    "name": "Your still here?",
+    "imageURL": "https://raw.githubusercontent.com/DeltaV-Instructor/class-13-201-demo-pizza-local-storage/main/images/goat-away.jpg"
+  }
+]

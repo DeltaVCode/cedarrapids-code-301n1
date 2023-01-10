@@ -1,0 +1,47 @@
+article {
+  border: 5px solid rgb(121, 80, 175);
+  padding: 1vw;
+  margin-bottom: 1vw;
+  width: 25%;
+}
+article img {
+  width: 100%;
+  height: 250px;
+}
+article p {
+  font-size: 18px;
+  /* margin: auto; */
+  /* display: inline-block; */
+  /* margin-bottom: .5rem; */
+}
+article p:last-of-type {
+  padding-left: 1rem;
+  cursor: pointer;
+}
+article p:last-of-type:hover {
+  color: rgb(18, 255, 10);
+  font-weight: bolder;
+  
+}
+.article-button {
+  margin: .2rem .1vw;
+  
+}
+
+
+.buttonMargin {
+  margin: 10px;
+}
+
+p {
+  color: whitesmoke;
+  background-color: rgb(43, 206, 228);
+  padding: 10px;
+}
+
+h4 {
+  background-color: rgba(15, 78, 172, 0.735);
+  border-radius: 10px;
+  /* display: inline; */
+  padding: 10px;
+}
