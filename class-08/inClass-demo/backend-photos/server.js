@@ -66,7 +66,7 @@ app.get('/', (request, response) => {
 
 
 
-app.get('/photos', (req, res, next)=> {
+app.get('/photos', async (req, res, next)=> {
   // TODO: get information from my frontend - keyword
   // TODO: make an axios call to unsplash API and get data back
   // TODO: select data to send back to the frontend. use NEW and class
@@ -74,21 +74,31 @@ app.get('/photos', (req, res, next)=> {
     //front end will send us a value for a search for photos
     let searchQueryFromTheFrontEnd = req.query.searchQuery;
     console.log('🚀 ~ file: server.js:76 ~ app.get ~ searchQueryFromTheFrontEnd', searchQueryFromTheFrontEnd);
+    //https://api.unsplash.com/photos/?client_id=YOUR_ACCESS_KEY
+    //1. use thunderclient to rebuild this api url.
 
-    let url = `https://api/unsplash.com/search/photos/?client_id=${process.env.UNSPLASH_API_KEY}&query=${searchQueryFromTheFrontEnd}&format=json`;
-    console.log(url);
-    // use thunderclient to rebuild this api url.
-    // we also use thunderclient to build the weather api url.
-    // should send to a constructor to select data that we want back from api call
-    // use thunder client to build the URL
-    // look at render and talk about adding weather keys for api calls
-    // look at lab 8 tech requirements in trello
+    let url = `https://api.unsplash.com/search/photos/?client_id=${process.env.UNSPLASH_API_KEY}&query=${searchQueryFromTheFrontEnd}&format=json`;
+    // console.log(url);
+    let results = await axios.get(url);
+    console.log('🚀 ~ file: server.js:83 ~ app.get ~ results', results.data.results);
+    //  3. should send to a constructor to select data that we want back from api call
+    let constructorData = results.data.results.map((picture) => new Photos(picture));
+    console.log("🚀 ~ file: server.js:86 ~ app.get ~ constructorData", constructorData);
+    res.status(200).send(constructorData);
 
+    /**
+    5. look at render and talk about adding weather keys for api calls
+
+    http://api.weatherbit.io/v2.0/forecast/daily?key=<add your key>&lang=en&units=I&days=5&lat=38.123&lon=-78.543
+
+    https://api.themoviedb.org/3/search/movie?api_key=<add your key>&language=en-US&page=1&include_adult=false&query=seattle
+    6. look at lab 8 tech requirements in trello.
+    2. we also use thunderclient to build the weather api url.
+ */
   } catch (error) {
     next(error);
   }
 
-  res.send('hello');
 });
 
 app.get('*', (req, res) => {
@@ -97,7 +107,14 @@ app.get('*', (req, res) => {
 
 //CLASSES
 //add photo constructor class to get the properties from our object from the api call
+class Photos{
+  constructor(photoObject){
+    this.src = photoObject.urls.regular;
+    this.alt = photoObject.alt_description;
+    this.artist = photoObject.user.name;
 
+  }
+}
 //ERRORS
 // eslint-disable-next-line no-unused-vars
 app.use((error, req, res, next) => {
