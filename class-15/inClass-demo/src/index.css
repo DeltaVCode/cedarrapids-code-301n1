@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --primary: #f84417;
+  --secondary: #1097e5;
+}
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Poppins";
+  background: var(--secondary);
+}
+* {
+  color: #fff;
+  /* margin: 0; */
+}
+p {
+  margin: 20px 0;
+}
+button {
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+  background: var(--primary);
+  cursor: pointer;
+}
+
+header {
+  margin-bottom: 30px;
+}
+/* navbar */
+header nav {
+  display: flex;
+  padding: 20px;
+  gap: 16px;
+  justify-content: end;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--primary);
+}
+header nav h1 {
+  margin-right: auto;
+  border-bottom: 3px solid var(--primary);
+}
+header nav a {
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 4px;
+}
+header nav a.active {
+  background: var(--secondary);
+}
+
+/* page content */
+main {
+  background: var(--primary);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* help layout */
+.help-page nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.help-page nav  a {
+  border: 5px solid white;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.help-page nav a:hover {
+  border-color: #1097e5;
+}
+.help-page nav a:active {
+  border-color: #f84417;
+}
+/* faq */
+.login-button {
+  border: 5px solid white;
+  margin-right: 60px;
+  margin: 20px 0px 20px 20px;
+  background: var(--primary);
+}
+
+main section {
+  width: 90%;
+  margin: 0 auto;
+  background: var(--secondary);
+  border: 5px solid white;
+}
+
+.profile-margin {
+  margin-top: 20px;
+}
