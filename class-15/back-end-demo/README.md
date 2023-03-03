@@ -1,1 +1,2 @@
-# Auth demo
+# cat-backend-demo
+server and database
